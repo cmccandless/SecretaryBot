@@ -1,7 +1,7 @@
 import praw,OAuth2Util,time
 
 
-botName='FILL_IN'
+botName='FILL_IN4'
 subreddit='FILL_IN'
 user_agent='Forwards all received PMs to approved submitters in /r/{}'.format(subreddit)
 
@@ -20,7 +20,7 @@ submitters=[]
 for u in r.get_contributors(subreddit,limit=None):
 	submitters.append(str(u))
 for m in r.get_unread(limit=None):
-	print(vars(m.author))
+	mark_as_read()
 	print("a:{}s:{};m:{}".format(m.author.name,m.subject,m.message))
 	for recipient in submitters:
 		if recipient != m.author.name and recipient != botName:
