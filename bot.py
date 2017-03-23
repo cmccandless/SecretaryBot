@@ -1,8 +1,8 @@
 import praw,OAuth2Util,time
 
 
-botName='FILL_IN4'
-subreddit='FILL_IN'
+botName='{BOT_NAME}'
+subreddit='{SUBREDDIT_NAME}'
 user_agent='Forwards all received PMs to approved submitters in /r/{}'.format(subreddit)
 
 r = praw.Reddit(user_agent)
